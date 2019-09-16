@@ -26,7 +26,7 @@ class App extends React.Component {
 
     return (
       <div className="App">
-        <Navbar />
+        <Navbar data-testid="navBar"/>
         {console.log(this.state.id)}
         {this.state.player.map(soccer => {
         return <PlayerCard

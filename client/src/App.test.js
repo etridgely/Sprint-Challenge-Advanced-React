@@ -1,9 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from "@testing-library/react";
 import App from './App';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+test('renders without crashing', () => {
+  const container = render(<App />);
+  console.log(container);
+});
+
+test('verify navBar is presenet', () => {
+  const { getByTestId } = render(<App />);
+  getByTestId(/navBar/i);
 });
