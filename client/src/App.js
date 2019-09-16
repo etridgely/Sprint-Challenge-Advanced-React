@@ -1,6 +1,9 @@
 import React from 'react';
 import axios from 'axios';
+
 import PlayerCard from './components/PlayerCard';
+import Navbar from "./components/Navbar";
+
 import './App.css';
 
 class App extends React.Component {
@@ -23,6 +26,7 @@ class App extends React.Component {
 
     return (
       <div className="App">
+        <Navbar />
         {console.log(this.state.id)}
         {this.state.player.map(soccer => {
         return <PlayerCard
