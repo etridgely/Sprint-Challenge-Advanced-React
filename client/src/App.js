@@ -23,13 +23,15 @@ class App extends React.Component {
 
     return (
       <div className="App">
-        {console.log(this.state.player)}
-        {<PlayerCard
-          key={this.state.player.id}
-          name={this.state.player.name}
-          country={this.state.player.country}
-          searches={this.state.player.searches}
-        />}
+        {console.log(this.state.id)}
+        {this.state.player.map(soccer => {
+        return <PlayerCard
+          key={soccer.id}
+          name={soccer.name}
+          country={soccer.country}
+          searches={soccer.searches}
+        />;
+        })}
       </div>
       );
       }
