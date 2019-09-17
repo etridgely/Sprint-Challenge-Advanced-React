@@ -7,7 +7,7 @@ test('renders without crashing', () => {
   console.log(container);
 });
 
-test('verify navBar is presenet', () => {
+test('verify navBar is present', () => {
   const { getByTestId } = render(<App />);
   getByTestId(/navBar/i);
 });
